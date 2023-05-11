@@ -1,0 +1,42 @@
+{
+  "admin": [
+    {
+      "headline": "Admin Component 1",
+      "content": "Admin component 1 content...",
+      "buttonText": "Button 1",
+      "buttonLink": "https://example.com"
+    },
+    {
+      "headline": "Admin Component 2",
+      "content": "Admin component 2 content...",
+      "buttonText": "Button 2",
+      "buttonLink": "https://example.com"
+    },
+    {
+      "headline": "Admin Component 1",
+      "content": "lorum ipsum dolor sit amet consectur adispicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "buttonText": "Opret",
+      "buttonLink": "https://example.com"
+    }
+  ],
+  "user": [
+    {
+      "headline": "Opret tidsregistrering",
+      "content": "User component 1 content...",
+      "buttonText": "Button 1",
+      "buttonLink": "https://kvejen.com/adbis/timeregistration"
+    },
+    {
+      "headline": "Samlede tidsregistreringer",
+      "content": "lorum ipsum dolor sit amet consectur adispicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "buttonText": "Få overblik",
+      "buttonLink": "https://example.com"
+    },
+    {
+      "headline": "Tilføj projekt",
+      "content": "lorum ipsum dolor sit amet consectur adispicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "buttonText": "Tilføj",
+      "buttonLink": "https://example.com"
+    }
+  ]
+}

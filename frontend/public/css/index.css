@@ -1,0 +1,107 @@
+.root {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eee;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 50.00vh);
+    width: calc(100% - 40px);
+    background-color: #CDD5E2;
+    margin: 20px;
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.logo {
+    border: 3px solid #eee;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.component-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.component {
+    min-width: 400px;
+    width: fit-content;
+    position: relative;
+    background-color: #5480B2;
+    box-sizing: border-box;
+    margin: 30px;
+    margin-top: 150px;
+    z-index: 1;
+    border-radius: 20px;
+    border: 3px solid #eee;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.component-headline {
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #224F90;
+    border-bottom: 2px solid #eee;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.component-content {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    min-height: 150px;
+    text-align: center;
+    width: 300px;
+    word-wrap: break-word;
+}
+
+.component-button {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.logout-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
