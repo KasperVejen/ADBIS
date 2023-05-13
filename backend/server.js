@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const fs = require("fs");
 const path = require("path");
 const componentData = require("./routers/componentdata");
+const timeregistration = require("./routers/timeregistration");
 
 const app = express();
 
@@ -20,4 +20,6 @@ app.use(
   })
 );
 app.use("/adbis/api", componentData);
+app.use("/adbis/api/timeregistration", timeregistration);
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
