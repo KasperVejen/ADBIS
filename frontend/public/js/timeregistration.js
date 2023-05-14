@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", function (e) {
   e.preventDefault();
 
+  // Check if user is logged in
+  const userRole = "user";
+
+  if (userRole !== "user") {
+    window.location.href = "unauthorized.html";
+    return;
+  }
+
+  // Get projects from database
   fetch("https://kvejen.com/adbis/api/database")
     .then((response) => response.json())
     .then((data) => {
@@ -13,13 +22,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
       }
     });
 
+  //add time registration to database
   const form = document.getElementById("timeregistration");
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const formData = new FormData(form);
-
     fetch("https://kvejen.com/adbis/api/timeregistration/timeregistration", {
       method: "POST",
       body: formData,
@@ -30,4 +37,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         alert(data.message);
       });
   });
+
+  
 });
