@@ -22,8 +22,8 @@
   "user": [
     {
       "headline": "Opret tidsregistrering",
-      "content": "User component 1 content...",
-      "buttonText": "Button 1",
+      "content": "Opret din tidsregistrering her. Husk at vælge det rigtige projekt og den rigtige opgave. Hvis du ikke kan finde den rigtige opgave, så kontakt din projektleder. Hvis du ikke kan finde det rigtige projekt, så kontakt din projektleder.",
+      "buttonText": "Opret",
       "buttonLink": "https://kvejen.com/adbis/timeregistration"
     },
     {

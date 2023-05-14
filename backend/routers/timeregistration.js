@@ -1,13 +1,23 @@
 //Imports
 const express = require("express");
 const router = express.Router();
+const bodyParser = require("body-parser");
+const db = require("../../data/configDB");
+const calculateTimeDifference = require("../../utilities/timediff");
+const createTimestamp = require("../../utilities/timestamp");
 const Timeregistration = require("../classes/registration");
+
+//Middleware
+router.use(bodyParser.json());
+
+//db.testConnection();
+db.testConnection();
 
 //Routes
 router.get("/timeregistration", async (req, res) => {
   try {
-    const sql = "SELECT * FROM timeregistration";
-    const connection = await pool.getConnection();
+    const sql = "SELECT * FROM time_registration";
+    const connection = await db.pool.getConnection();
     const [rows, fields] = await connection.execute(sql);
     connection.release();
     res.json(rows);
@@ -18,13 +28,18 @@ router.get("/timeregistration", async (req, res) => {
 });
 
 router.post("/timeregistration", async (req, res) => {
-  const { user, date, hours, pause, project } = req.body;
+  console.log("POST /timeregistration");
+  console.log(req.body);
+  console.log(createTimestamp());
+  let { user_ID, date, start_time, end_time, pause, project } = req.body;
+  let hours = calculateTimeDifference(date, start_time, end_time);
   const timeregistration = new Timeregistration(
-    user,
+    user_ID,
     date,
     hours,
     pause,
-    project
+    project,
+    createTimestamp()
   );
   if (await timeregistration.save()) {
     res.json({ message: "Timeregistration saved" });

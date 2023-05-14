@@ -1,28 +1,34 @@
 //Database connection
 const { pool, testConnection } = require("../../data/configDB");
+//const createTimestamp = require("../../utilities/timestamp");
+
+//test connection to database
+testConnection();
 
 //Class for Timeregistration
 class Timeregistration {
-  constructor(user, date, hours, pause, project) {
-    this.user = user;
+  constructor(user_ID, date, hours, pause, project, timestamp) {
+    this.user_ID = user_ID;
     this.date = date;
     this.hours = hours;
     this.pause = pause;
     this.project = project;
+    this.timestamp = timestamp;
   }
 
   //save to database
   async save() {
     try {
       const sql =
-        "INSERT INTO timeregistration (user, date, hours, pause, project) VALUES (?, ?, ?, ?, ?)";
+        "INSERT INTO time_registration (user_ID, date, hours_in_min, pause, project, timestamp) VALUES (?, ?, ?, ?, ?, ?)";
       const connection = await pool.getConnection();
       const [rows, fields] = await connection.execute(sql, [
-        this.user,
+        this.user_ID,
         this.date,
         this.hours,
         this.pause,
         this.project,
+        this.timestamp,
       ]);
       connection.release();
       return true;

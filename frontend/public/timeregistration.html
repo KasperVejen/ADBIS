@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="./css/timeregistration.css" />
+    <script defer type="module" src="./js/timeregistration.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timeregistration</title>
   </head>
-  <body>
-    <h2>Timeregistration</h2>
+  <body class="root">
+    <div class="background">
+      <div class="container">
+      <h1>Time registrering</h1>  
+      <p>Her kan du oprette din timeregistrering</p>
+      </div>
+    <div class="form-container">
+      <form action="" id="timeregistration" class="form">
+          <input type="text" name="user_ID" id="user_ID" hidden value="1">
+          <label class="label" for="date">Dato:</label>
+          <input class="input" type="date" name="date" id="date" />
+          <label class="label" for="start_time">Start tid:</label>
+          <input class="input" type="time" name="start_time" id="start_time" />
+          <label class="label" for="end_time">Slut tid:</label>
+          <input class="input" type="time" name="end_time" id="end_time" />
+          <label class="label" for="pause">Pause:</label>
+          <div class="input-with-addon">
+            <input class="input" type="number" name="pause" id="pause" value="00" min="0" />
+            <span class="addon">min</span>
+          </div>      
+          <label class="label" for="project">Projekt:</label>
+          <select name="project" class="input" id="project">
+            <option value="">Vælg projekt:</option>
+          </select>
+          <button id="submit-btn" type="submit">Gem</button>
+      </form>
+    </div>
+    <a href="https://kvejen.com/adbis/">
+      <button class="back-button">Tilbage</button>
+    </a>
+    <a href="">
+      <button class="logout-button">Logout</button>
+    </a>
   </body>
 </html>
