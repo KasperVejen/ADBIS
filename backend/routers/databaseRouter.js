@@ -11,7 +11,8 @@ db.testConnection();
 //get all projects name
 router.get("/", async (req, res) => {
   try {
-    const sql = "SELECT project_ID, project_name FROM projects";
+    const sql =
+      "SELECT project_ID, project_name FROM projects ORDER BY project_ID ASC";
     const connection = await db.pool.getConnection();
     const [rows, fields] = await connection.execute(sql);
     connection.release();

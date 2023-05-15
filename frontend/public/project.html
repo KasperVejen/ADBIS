@@ -6,10 +6,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add project</title>
+    <title>Tilføj projekt</title>
 </head>
-<body>
-    <h1>HEllo world</h1>
-    
-</body>
+<body class="root">
+    <div class="background">
+      <div class="container">
+      <h1>Projekt</h1>  
+      <p>Her kan du oprette nye projekter</p>
+      </div>
+    <div class="form-container">
+      <form action="" id="project" class="form">
+          <label class="label" for="name">Projekt navn:</label>
+          <input class="input" type="text" name="name" id="name" />
+          <label class="label" for="description">Beskrivelse:</label>
+          <input class="input" type="text" name="description" id="description" />
+          <label class="label" for="customer_name">Kunde navn:</label>
+          <input class="input" type="text" name="customer_name" id="customer_name" />
+          <label class="label" for="customer_cvr">Kundens CVR:</label>
+          <input class="input" type="text" name="customer_cvr" id="customer_cvr" />
+          <button id="submit-btn" type="submit">Gem</button>
+      </form>
+    </div>
+    <a href="https://kvejen.com/adbis/"><button class="back-button">Tilbage</button></a>
+    <a href=""><button class="logout-button">Logout</button></a>
+  </body>
 </html>

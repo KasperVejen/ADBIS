@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
       for (let i = 0; i < data.length; i++) {
         let option = document.createElement("option");
         option.value = data[i].project_ID;
-        option.text = data[i].project_name;
+        option.text =
+          "ID: " + data[i].project_ID + " - " + "Navn: " + data[i].project_name;
         select.add(option);
       }
     });
@@ -37,6 +38,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
         alert(data.message);
       });
   });
-
-  
 });

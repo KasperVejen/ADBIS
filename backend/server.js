@@ -6,6 +6,7 @@ const formData = require("express-form-data");
 const componentData = require("./routers/componentdata");
 const timeregistration = require("./routers/timeregistration");
 const databaseRouter = require("./routers/databaseRouter");
+const projectRouter = require("./routers/projectRouter");
 
 const app = express();
 
@@ -22,8 +23,10 @@ app.use(
     extensions: ["html"],
   })
 );
+//routers
 app.use("/adbis/api", componentData);
 app.use("/adbis/api/timeregistration", timeregistration);
 app.use("/adbis/api/database", databaseRouter);
+app.use("/adbis/api/projects", projectRouter);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

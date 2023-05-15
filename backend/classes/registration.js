@@ -1,9 +1,5 @@
 //Database connection
 const { pool, testConnection } = require("../../data/configDB");
-//const createTimestamp = require("../../utilities/timestamp");
-
-//test connection to database
-testConnection();
 
 //Class for Timeregistration
 class Timeregistration {
