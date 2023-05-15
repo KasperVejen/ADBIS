@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", function (e) {
   e.preventDefault();
 
-  // Check if user is logged in
+  // Check if user is logged in and is admin or user
+  const userRole = "admin"; //Change to actual user role
+  if (userRole !== "user" && userRole !== "admin") {
+    window.location.href = "unauthorized.html";
+    return;
+  }
 
   //add time registration to database
   const form = document.getElementById("project");
@@ -16,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       .then((data) => {
         console.log(data);
         alert(data.message);
+        window.location.href = "https://kvejen.com/adbis/";
       })
       .catch((error) => {
         console.error("Error:", error);

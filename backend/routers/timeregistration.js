@@ -28,9 +28,6 @@ router.get("/timeregistration", async (req, res) => {
 });
 
 router.post("/timeregistration", async (req, res) => {
-  console.log("POST /timeregistration");
-  console.log(req.body);
-  console.log(createTimestamp());
   let { user_ID, date, start_time, end_time, pause, project } = req.body;
   let hours = calculateTimeDifference(date, start_time, end_time);
   const timeregistration = new Timeregistration(

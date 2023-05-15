@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (e) {
   e.preventDefault();
 
-  // Check if user is logged in
+  // Check if user is logged in 
   const userRole = "user";
 
   if (userRole !== "user") {
@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
       .then((data) => {
         console.log(data);
         alert(data.message);
+        window.location.href = "https://kvejen.com/adbis/";
+      })
+      .catch((error) => {
+        console.error("Error:", error);
       });
   });
 });

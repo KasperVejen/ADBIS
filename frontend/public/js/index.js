@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (e) {
   e.preventDefault();
 
-  const login = "user";
+  
+
 
   fetch(`https://kvejen.com/adbis/api/component-data/${login}`)
     .then((response) => response.json())
