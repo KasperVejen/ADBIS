@@ -7,13 +7,12 @@ const componentData = require("./routers/componentdata");
 const timeregistration = require("./routers/timeregistration");
 const databaseRouter = require("./routers/databaseRouter");
 const projectRouter = require("./routers/projectRouter");
-
 const app = express();
 
 dotenv.config({ path: "../.env" });
-
 const PORT = process.env.PORT || 3000;
 
+//middleware
 app.use(cors());
 app.use(express.json());
 app.use(formData.parse());
@@ -29,4 +28,5 @@ app.use("/adbis/api/timeregistration", timeregistration);
 app.use("/adbis/api/database", databaseRouter);
 app.use("/adbis/api/projects", projectRouter);
 
+//start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -14,6 +14,7 @@ class Timeregistration {
 
   //save to database
   async save() {
+    testConnection();
     try {
       const sql =
         "INSERT INTO time_registration (user_ID, date, hours_in_min, pause, project, timestamp) VALUES (?, ?, ?, ?, ?, ?)";

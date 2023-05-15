@@ -10,9 +10,6 @@ const Timeregistration = require("../classes/registration");
 //Middleware
 router.use(bodyParser.json());
 
-//db.testConnection();
-db.testConnection();
-
 //Routes
 router.get("/timeregistration", async (req, res) => {
   try {

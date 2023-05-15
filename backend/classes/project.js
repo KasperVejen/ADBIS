@@ -16,6 +16,7 @@ class Project {
   }
 
   async save() {
+    testConnection();
     try {
       const sql =
         "INSERT INTO projects (project_name, project_description, customer_name, customer_CVR, timestamp) VALUES (?, ?, ?, ?, ?)";

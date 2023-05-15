@@ -11,9 +11,6 @@ const Project = require("../classes/project");
 //middleware
 router.use(bodyParser.json());
 
-//db.testConnection();
-db.testConnection();
-
 //routes
 router.post("/project", async (req, res) => {
   let { name, description, customer_name, customer_cvr } = req.body;

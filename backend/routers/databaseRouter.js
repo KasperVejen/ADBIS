@@ -5,8 +5,6 @@ const express = require("express");
 const router = express.Router();
 const db = require("../../data/configDB");
 
-db.testConnection();
-
 //Routes
 //get all projects name
 router.get("/", async (req, res) => {
