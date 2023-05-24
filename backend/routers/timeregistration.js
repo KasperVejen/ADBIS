@@ -25,7 +25,7 @@ router.get("/timeregistration", async (req, res) => {
 });
 
 router.post("/timeregistration", async (req, res) => {
-  let { user_ID, date, start_time, end_time, pause, project } = req.body;
+  let { user_ID, date, start_time, end_time, pause, project, work } = req.body;
   let hours = calculateTimeDifference(date, start_time, end_time);
   const timeregistration = new Timeregistration(
     user_ID,
@@ -33,12 +33,25 @@ router.post("/timeregistration", async (req, res) => {
     hours,
     pause,
     project,
+    work,
     createTimestamp()
   );
   if (await timeregistration.save()) {
     res.json({ message: "Timeregistration saved" });
   } else {
     res.status(500).json({ error: "Timeregistration not saved" });
+  }
+});
+
+//update timeregistration status. 0 = not approved, 1 = approved 2 = rejected
+router.put("/timeregistration/:id", async (req, res) => {
+  let { status } = req.body;
+  const timeregistration = new Timeregistration();
+  timeregistration.status = status;
+  if (await timeregistration.updateStatus(req.params.id)) {
+    res.json({ message: "Timeregistration status updated" });
+  } else {
+    res.status(500).json({ error: "Timeregistration status not updated" });
   }
 });
 

@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function (e) {
   e.preventDefault();
 
-  
+  const userRole = window.prompt("skriv ansat eller leder"); // user eller admin
+  console.log(userRole);
 
-
-  fetch(`https://kvejen.com/adbis/api/component-data/${login}`)
+  fetch(`https://kvejen.com/adbis/api/component-data/${userRole}`)
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < data.length; i++) {

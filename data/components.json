@@ -1,25 +1,31 @@
 {
-  "admin": [
+  "leder": [
     {
-      "headline": "Admin Component 1",
-      "content": "Admin component 1 content...",
-      "buttonText": "Button 1",
-      "buttonLink": "https://example.com"
+      "headline": "Overblik over tidsregistreringer",
+      "content": "Leder component 1 content...",
+      "buttonText": "Få overblik",
+      "buttonLink": ""
     },
     {
-      "headline": "Admin Component 2",
-      "content": "Admin component 2 content...",
-      "buttonText": "Button 2",
-      "buttonLink": "https://example.com"
+      "headline": "Statistik",
+      "content": "Leder component 2 content...",
+      "buttonText": "Se statistik",
+      "buttonLink": ""
     },
     {
-      "headline": "Admin Component 1",
+      "headline": "Håndtering af jobroller",
       "content": "lorum ipsum dolor sit amet consectur adispicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "buttonText": "Opret",
-      "buttonLink": "https://example.com"
+      "buttonText": "Håndter jobroller",
+      "buttonLink": ""
+    },
+    {
+      "headline": "Tilføj projekt",
+      "content": "lorum ipsum dolor sit amet consectur adispicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "buttonText": "Tilføj",
+      "buttonLink": "https://kvejen.com/adbis/project"
     }
   ],
-  "user": [
+  "ansat": [
     {
       "headline": "Opret tidsregistrering",
       "content": "Opret din tidsregistrering her. Husk at vælge det rigtige projekt og den rigtige opgave. Hvis du ikke kan finde den rigtige opgave, så kontakt din projektleder. Hvis du ikke kan finde det rigtige projekt, så kontakt din projektleder.",
@@ -28,14 +34,14 @@
     },
     {
       "headline": "Samlede tidsregistreringer",
-      "content": "lorum ipsum dolor sit amet consectur adispicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "content": "Få et samlet overblik over dine tidsregistreringer. Du kan også se dine tidsregistreringer for en specifik periode. Hvis du har spørgsmål til dine tidsregistreringer, så kontakt din projektleder.",
       "buttonText": "Få overblik",
       "buttonLink": "https://example.com"
     },
     {
-      "headline": "Tilføj projekt",
-      "content": "lorum ipsum dolor sit amet consectur adispicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "buttonText": "Tilføj",
+      "headline": "Tilføj arbejdsopgave",
+      "content": "Tilføj arbejdsopgave som passer til specifikke arbejdsopgave. Tjek gerne at der ikke er et ligende arbejdsopgave i forvejen. ",
+      "buttonText": "Tilføj opgave",
       "buttonLink": "https://kvejen.com/adbis/project"
     }
   ]

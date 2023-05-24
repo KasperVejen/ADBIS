@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   e.preventDefault();
 
   // Check if user is logged in and is admin or user
-  const userRole = "admin"; //Change to actual user role
+  const userRole = "admin"; //HARDCODED. Change to actual user role
   if (userRole !== "user" && userRole !== "admin") {
     window.location.href = "unauthorized.html";
     return;
